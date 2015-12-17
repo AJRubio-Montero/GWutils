@@ -1,0 +1,102 @@
+===== LICENSE =====
+
+Copyright 2010-2015, A.J. Rubio-Montero (CIEMAT - Sci-track R&D group)         
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+
+===== ADDITIONAL LICENSE STATEMENT ===== 
+
+If you use this code to perform any kind of research, report, 
+documentation, or development you should properly cite GWutils in your 
+work with any related paper listed at:  
+http://rdgroups.ciemat.es/web/sci-track/
+
+
+===== WELCOME =====
+
+GWutils is a set of tools to improve the GridWay (http://gridway.org) 
+functionalities and/or performance, which are needed by other systems 
+as the GWpilot framework, the Gwcloud drivers or simply by users that 
+adapt their applications.
+
+===== RELEASE POLICY AND SUPPORT =====
+
+Currently, the development of GWutils is devoted to address certain 
+goals in academic research or to accomplish  the objectives of certain 
+research grants in diverse scientific areas. In many cases, the only 
+acknowledgement or profit from this work is the resulting publications.
+
+For this reason, GWutils developers will usually follow the policy of 
+publishing before including any new feature in the code. For the same 
+motivation, the troubleshooting support is not warranted in any case.
+
+These procedures could change for some communities in the scope of 
+common projects or agreements. Don't hesitate to contact with authors 
+if you or your institution are interested in any collaboration.
+
+Therefore the code, complete release notes, and current and foreseen 
+features can be found online: 
+http://rdgroups.ciemat.es/web/sci-track/GWpilot
+
+or at the official GridWay code repository:
+https://github.com/GridWay/gwpilot
+
+
+===== DOCUMENTATION =====
+
+The documentation is completely online:
+http://rdgroups.ciemat.es/web/sci-track/GWpilot
+or at the official GridWay code repository:
+https://github.com/GridWay/gwpilot
+
+
+===== REQUIREMENTS =====
+
+The GWutils.EMutils and GWutils.IMutils packages require:
+
+a) GridWay >= 5.6.1,   patched with gridway_5.6.1_5.14-GWutils-u1.0 and *-u2.0 
+
+The Gwutils.easyDRMAA package requires:
+
+b) The GridWay DRMAA python binding 0.1:
+http://www.gridway.org/lib/exe/fetch.php?media=ecosystem:drmaa:gw-drmaa-python-0.1.tar.gz
+( with gw-drmaa-python-0.1-GWutils-u1.0 and *-u2.0 patches).
+
+
+Specific installation tips and some tested patched releases can be found in the GWutils
+documentation page  (http://rdgroups.ciemat.es/web/sci-track/GWpilot
+or at the source repository https://github.com/GridWay/gwpilot)
+
+
+===== SUMMARISED INSTALLATION =====
+
+GWutils source code can be found at:
+
+a) http://rdgroups.ciemat.es/web/sci-track/GWpilot   (zipped).
+
+b) https://github.com/GridWay/gwpilot   (zipped, browseable repository, or via GIT and SVN).
+
+Additionally, some unofficial GridWay releases, tools and patches can be found at:
+https://github.com/AJRubio-Montero/
+
+
+Over a patched GridWay installation with DRMAA python support: 
+
+1) unzip GWutils.zip GWpilot.tar.gz -d <temporal folder>
+
+2) chown <GW admin user>:<GW admin group> <temporal folder>
+
+3) cp -dpR <temporal folder>/* $GW_LOCATION/
+
+(Check the Installation Guide for more details.)

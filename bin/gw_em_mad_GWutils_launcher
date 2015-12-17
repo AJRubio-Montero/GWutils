@@ -1,0 +1,37 @@
+###########################################################################
+#
+#   Copyright 2010-2015, A.J. Rubio-Montero (CIEMAT - Sci-track R&D group)         
+#
+#   Licensed under the Apache License, Version 2.0 (the "License");
+#   you may not use this file except in compliance with the License.
+#   You may obtain a copy of the License at
+#
+#       http://www.apache.org/licenses/LICENSE-2.0
+#
+#   Unless required by applicable law or agreed to in writing, software
+#   distributed under the License is distributed on an "AS IS" BASIS,
+#   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#   See the License for the specific language governing permissions and
+#   limitations under the License.
+#
+###########################################################################
+#
+#   Additional license statement: 
+#
+#    If you use this code to perform any kind of research, report, 
+#    documentation, or development you should properly cite GWutils in your 
+#    work with any related paper listed at: 
+#         http://rdgroups.ciemat.es/web/sci-track/
+#
+###########################################################################
+
+#!/bin/bash
+if [ -z "${GW_LOCATION}" ]; then
+    echo "Please, set GW_LOCATION variable."
+    exit -1
+fi
+. $GW_LOCATION/bin/gw_mad_common.sh
+export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/${GW_LOCATION}/lib
+MAD_PATH=$1
+shift
+exec nice -n ${PRIORITY} python -OO $MAD_PATH $* 2>${GW_LOCATION}/var/em_launcher_`whoami`.error_log.$$ | tee $GW_LOCATION/var/em_launcher_`whoami`.response_log.$$
